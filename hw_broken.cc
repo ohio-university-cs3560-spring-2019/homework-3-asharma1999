@@ -2,23 +2,31 @@
 #include <vector>
 #include <cmath>
 
-
-
-int deviation( int* a, int n )
+double deviation(int* &a, int &n)
 {
-	int sum;
-	for(size_t i = 0; i <= v.size(); i++)
+	double sum = 0;
+	
+	for(int i = 0; i < n; ++i)
 	{
-		sum += v[i];
+		sum += a[i];
 	} 
-	double mean = sum /= v.size();
+	
+	double mean = sum /= n;
 	double stddev = 0;
-	for(size_t i = 0; i <= v.size() -1; i++)
+	
+	for(int i = 0; i < n; ++i)
 	{
-		double stddev = stddev + (v[i] - mean) * (v[i] - mean); 
+		stddev = stddev + (a[i] - mean) * (a[i] - mean);
 	}
-	stddev /= v.size();
-	if( stddev = 0)
+	
+	stddev /= n;
+	
+	if(stddev == 0)
+	{
 		std::cout << "Sigma is zero." << std::endl;
+		return 0;
+	}
+	
 	return sqrt(stddev);
 }
+
