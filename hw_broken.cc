@@ -1,6 +1,17 @@
+/**
+* \file
+*
+*/
+
 #include <iostream>
-#include <vector>
 #include <cmath>
+
+/**
+* \brief This function calculates the standard deviation.
+* \param a This is the dynamic array that stores the data set.
+* \param n This is the size of the array.
+* \return This will return the standard deviation value as a double of the data set.
+*/
 
 double deviation(int* &a, int &n)
 {
